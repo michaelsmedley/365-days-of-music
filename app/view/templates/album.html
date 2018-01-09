@@ -1,0 +1,12 @@
+
+<div class="columns small-9 medium-expand medium-4 text-center album__image">
+    <img src="/assets/img/placeholder.png" data-flickity-lazyload="proxy.php?csurl={{album.image}}"  itemprop="image" alt="{{album.artist}} - {{album.title}}"  />
+</div>
+
+<div class="columns small-9 medium-expand medium-7 large-3 text-left album__desc">
+    <h4 class="album__counter nomarg">{{("00"+($index+1)).slice(-3)}}</h4>
+    <h2 class="album__name nomarg" itemprop="name">{{album.title}}</h2>
+    <h3 class="album__artist nomarg" itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup"><span itemprop="name">{{album.artist}}</span></h3>
+
+    <p><a href="{{album.url}}" target="_blank" class="button button--spotify" rel="noopener">Play on Spotify</a></p>
+</div>

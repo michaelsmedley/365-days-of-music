@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /app
+Disallow: /spotify
+Allow: /app/data/target.json
+Allow: /app/view/templates/suggestForm.html
+Allow: /app/view/templates/album.html

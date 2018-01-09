@@ -1,0 +1,43 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWG4PCB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="carousel">
+  <div class=" intro slide row align-middle align-center">
+    <div class="columns small-12 medium-6">
+      <h1>#365daysofmusic</h1>
+      <p class="text-justify">#365daysofmusic is an attempt to broaden my musical horzions.  To discover the music that shaped generations, that told histories stories, and new heros being born.  That made legends and icons in 4 minute segments.   No limits on artist, no limits on genres, just studio albums to help educate.</p>
+      
+      <p><a href="https://open.spotify.com/user/mikesmedley/playlist/1B3T8SsXlet08woFXiOxjQ" target="_blank">Playlist</a> / <a href="https://twitter.com/smdly">@smdly</a></p>
+    </div>
+  </div>
+
+<div class="album slide row align-middle align-center" ng-repeat="(key,album) in albums track by $index">
+  <div class="columns small-9 medium-expand medium-4 text-center album__image">
+    <img src="proxy.php?csurl={{album.image}}" class="carousel-cell-image" src="/assets/img/placeholder.png"  />
+  </div>
+  
+  <div class="columns small-9 medium-expand medium-7 large-3 text-left album__desc">
+    <h4 class="album__counter nomarg">{{("00"+($index+1)).slice(-3)}}</h4>
+    <h2 class="album__name nomarg">{{album.title}}</h2>
+    <h3 class="album__artist nomarg">{{album.artist}}</h3>
+    
+    <p><a href="{{album.url}}" target="_blank" class="button">Play on Spotify</a></p>
+  </div>
+  
+  
+</div>
+  
+</div>
+
+<div ng-click="toggleCalendar()" class="hamburger">
+    <em></em>
+
+</div>
+
+<div class="calendar">
+    <p class="text-center"><a href="https://open.spotify.com/user/mikesmedley/playlist/1B3T8SsXlet08woFXiOxjQ" target="_blank">Playlist</a> / <a href="https://twitter.com/smdly">@smdly</a></p>
+    <ul class="row full">
+        <li ng-repeat="n in [] | range:365 track by $index" class="columns small-2 medium-1 listless text-center"><a href="#" class="cal-link" ng-class="total < $index+1 ? 'disabled':''" ng-click="total < $index+1 ? '': goToSlide($index+1)">{{$index+1}}</a></li>
+    </ul>
+</div>

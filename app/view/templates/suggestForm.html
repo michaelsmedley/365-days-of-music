@@ -1,0 +1,27 @@
+<form novalidate class="form column small-12" name="form" ng-model="suggestion">
+    <h1 class="text-center intro__title">364 albums and you</h3>
+
+    <p>Whilst I have a lot of my own suggestions for albums to listen to, I am still interested in discovering even more.  The albums I might not have heard or, the big albums that defined periods of time.  If you have an album you think I should be listening to, I would love to know about it.  A couple of proviso's though:</p>
+
+    <ul>
+        <li>No compilations - has to be an original studio album</li>
+        <li>Needs to be available on Spotify</li>
+        <li>Must be one not listed on this site already.</li>
+        <li>Other then that, all is good!
+    </ul>
+
+    <p>Just fill out this form and keep your eyes on the site to see if it made it.</p>
+
+    <p><label for="album">Album name/Spotify URL</label>
+    <input type="text" name="album" id="album" required placeholder="Can be album name + artist or direct link" ng-model="suggestion.album" />
+    <span ng-show="(form.album.$dirty || submitted) && form.album.$error.required" class="label alert">
+      Sorry, I have to know what the album is...
+    </span>
+
+    <p><label for="twitter">Your Twitter handle</label>
+    <input type="text" name="twitter" id="twitter" placeholder="So I can kudos you!" ng-model="suggestion.twitter" /></p>
+
+    <p><button type="submit" ng-click="submit(suggestion)" class="button button--spotify">Suggest</button></p> 
+
+    <div class="label" ng-if="resp">{{resp}}</div>
+</form>

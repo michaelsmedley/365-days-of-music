@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a track</title>
+    <style type="text/css">
+    body {background: #ededed;font-family: "Helvetica","Ariel",sans-serif;}
+    form {max-width: 90%; width: 1500px; margin: 1.25rem auto; background: white; padding: 1.25rem; box-sizing: border-box;}
+    .form-list {margin: 0; padding: 0;}
+	.form-list__item {list-style-type: none; margin:0; padding: 0;}
+	.form-list__item label {display: block;}
+	.form-list__item input {margin-bottom: 1.25rem; padding: 0.3125rem; width: 100%; box-sizing: border-box;font-size: 1.25rem;}
+	button{ font-size: 1.25rem; color: white; background: #090; padding: 0.625rem; border:none; }
+    </style>
+</head>
+<body>
+
+    <form method="post" action="addtrack.php">
+        <ul class="form-list">
+            <li class="form-list__item"><label for="track">Track Link</label><input type="text" name="track" id="track" placeholder="Track Link" /></li>
+            <li class="form-list__item"><label for="recommend">Recommended by anyone?</label><input type="text" name="recommend" id="recommend" placeholder="Recommended by anyone?" /></li>
+            <li class="form-list__item"><label for="recommend">Finally... password</label><input type="password" name="password" id="password" placeholder="Password" /></li>
+            <li class="form-list__item"><button type="submit">Submit</button></li>
+        </ul>
+    </form>
+    
+</body>
+</html>
